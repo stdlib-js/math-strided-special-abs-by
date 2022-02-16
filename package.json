@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-strided-special-abs-by",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Compute the absolute value of each element retrieved from a strided input array via a callback function and assign each result to an element in a strided output array.",
   "license": "Apache-2.0",
   "author": {
