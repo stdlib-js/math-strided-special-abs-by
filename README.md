@@ -32,20 +32,30 @@ limitations under the License.
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-strided-special-abs-by
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import absBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-abs-by@esm/index.mjs';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { ndarray } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-abs-by@esm/index.mjs';
+var absBy = require( '@stdlib/math-strided-special-abs-by' );
 ```
 
 #### absBy( N, x, strideX, y, strideY, clbk\[, thisArg] )
@@ -122,7 +132,7 @@ absBy( 3, x, 2, y, -1, accessor );
 Note that indexing is relative to the first index. To introduce an offset, use [`typed array`][mdn-typed-array] views.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 function accessor( v ) {
     return v * 2.0;
@@ -207,15 +217,10 @@ absBy.ndarray( 3, x, 2, 1, y, -1, y.length-1, accessor );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import discreteUniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-discrete-uniform@esm/index.mjs';
-import filledarray from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-filled@esm/index.mjs';
-import absBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-strided-special-abs-by@esm/index.mjs';
+```javascript
+var discreteUniform = require( '@stdlib/random-base-discrete-uniform' );
+var filledarray = require( '@stdlib/array-filled' );
+var absBy = require( '@stdlib/math-strided-special-abs-by' );
 
 function accessor( v, i ) {
     if ( (i%3) === 0 ) {
@@ -237,10 +242,6 @@ console.log( y );
 
 absBy.ndarray( x.length, x, 1, 0, y, -1, y.length-1, accessor );
 console.log( y );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -271,7 +272,7 @@ console.log( y );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -301,8 +302,8 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-strided-special-abs-by.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-strided-special-abs-by
 
-[test-image]: https://github.com/stdlib-js/math-strided-special-abs-by/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/math-strided-special-abs-by/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/math-strided-special-abs-by/actions/workflows/test.yml/badge.svg?branch=v0.0.7
+[test-url]: https://github.com/stdlib-js/math-strided-special-abs-by/actions/workflows/test.yml?query=branch:v0.0.7
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-strided-special-abs-by/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-strided-special-abs-by?branch=main
@@ -335,13 +336,13 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
-[@stdlib/math/base/special/abs]: https://github.com/stdlib-js/math-base-special-abs/tree/esm
+[@stdlib/math/base/special/abs]: https://github.com/stdlib-js/math-base-special-abs
 
 <!-- <related-links> -->
 
-[@stdlib/math/strided/special/abs]: https://github.com/stdlib-js/math-strided-special-abs/tree/esm
+[@stdlib/math/strided/special/abs]: https://github.com/stdlib-js/math-strided-special-abs
 
-[@stdlib/math/strided/special/abs2-by]: https://github.com/stdlib-js/math-strided-special-abs2-by/tree/esm
+[@stdlib/math/strided/special/abs2-by]: https://github.com/stdlib-js/math-strided-special-abs2-by
 
 <!-- </related-links> -->
 
