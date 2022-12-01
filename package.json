@@ -44,16 +44,16 @@
   },
   "devDependencies": {
     "@stdlib/array-filled": "^0.0.x",
+    "@stdlib/array-filled-by": "^0.0.x",
     "@stdlib/array-float64": "^0.0.x",
     "@stdlib/bench": "^0.0.x",
     "@stdlib/math-base-assert-is-nan": "^0.0.x",
     "@stdlib/math-base-special-pow": "^0.0.x",
     "@stdlib/math-strided-special-dabs": "^0.0.x",
-    "@stdlib/random-base-discrete-uniform": "^0.0.x",
-    "@stdlib/random-base-randu": "^0.0.x",
+    "@stdlib/random-base-uniform": "^0.0.x",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
-    "tap-spec": "5.x.x"
+    "tap-min": "2.x.x"
   },
   "engines": {
     "node": ">=0.10.0",
